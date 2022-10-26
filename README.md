@@ -2,10 +2,10 @@
 Supplementary Material for ``SwinDiD: Dimension-invariant Disentangling model with Swin Transformer for Light Field Super-Resolution''
 
 In this supplemental material, we provide additional time complexity calculation details
-and three additional comparison methods have been added to the main paper 
+and three additional comparison methods have been added to the main paper. 
  
 <a href="https://github.com/YuxinBao/YuxinBao.github.io/blob/main/SwinDiD-supp.pdf" target="_blank">PDF.</a>
-![]()
+![ Fig.1. The convolution operation of one Distg-Block and DiD-Block.]()
 ## 1. Appendix A
 A feature map of size $N \times N$ is fed to a convolution layer with a kernel $K \times K$ to output a feature map of size $M \times M$.
 The corresponding time complexity of a single convolutional layer is formulated as
@@ -14,14 +14,12 @@ The corresponding time complexity of a single convolutional layer is formulated 
  <p align="center">$time \sim \mathcal{O}({M^2 \times K^2 \times C_{in} \times C_{out}})$ （1）</p>
 
 
-where $C_{in}$ represents the number of input channels, that is, the number of output channels of previous layer. $C_{out}$ represents the number of convolution kernels in this convolutional layer, that is, 
-
-the number of input channels of next layer.
+where $C_{in}$ represents the number of input channels, that is, the number of output channels of previous layer. $C_{out}$ represents the number of convolution kernels in this convolutional layer, that is the number of input channels of next layer.
 It can be seen that the time complexity of each convolutional layer is completely determined by the area of the output feature map $M^2$, the area of the convolution kernel $K^2$, and the number of input $C_{in}$ and output channels $C_{out}$. 
 The overall time complexity of a convolutional neural network is the sum of the time complexity of each convolutional layer. 
 
 
-As shown in Figure \ref{png_2}, the input feature is of size $UH \times VW \times C$, where $U$ and $V$ are the angular resolution, $H$ and $W$ are the spatial resolutions. We define the angular resolution $U=V=A$, so the input feature of size can be express as $AH \times AW \times C$. 
+As shown in Fig.1, the input feature is of size $UH \times VW \times C$, where $U$ and $V$ are the angular resolution, $H$ and $W$ are the spatial resolutions. We define the angular resolution $U=V=A$, so the input feature of size can be express as $AH \times AW \times C$. 
 Pixel shuffle and Concatenate operations have less time complexity, therefore it is not computed in the calculation of the time complexity. Next, we will calculate the time complexity of Distg-Block and DiD-Block respectively.
 
 ### 1.1 Time Complexity of Distg-Block
@@ -150,7 +148,7 @@ On the basis of the main paper, we have added two SISR methods which are EDSR\ci
 Table 1 shows the quantitative results achieved by SwinDiD in comparison with other state-of-the-art SR methods. SwinDiD achieves competitive PSNR and SSIM results on all five datasets of $\times 2 $ SR. 
 
 ### 2.2 Qualitative Results 
-Figure \ref{2sr} and Figure \ref{4sr} show the whole image visual quality comparisons of different methods for $2 \times$ SR and $4 \times$ SR, respectively.
+Fig.2 and Fig.3 show the whole image visual quality comparisons of different methods for $2 \times$ SR and $4 \times$ SR, respectively.
 It can be seen that the SISR methods including VDSR\cite{27}, EDSR\cite{28}, and RCAN\cite{29}, fail to recover complex textures and details. In contrast, the deep learning based LF image SR methods can produce better visual effects than SISR methods, which is attribute to the use of different viewpoints information. However, edges and textures recovered by these methods are still suffer from blurring.
 Compared with state-of-the-art methods, our SwinDiD can recover complex structures with shaper edges and fine details. Besides, we can observe that SwinDiD generates more appealing result than DiD in  $2 \times$ and $4 \times$ SR.
 \begin{table*}
