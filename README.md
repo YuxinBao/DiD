@@ -3,4 +3,4 @@ SwinDiD : Dimension-invariant Disentangling model with Swin Transformer for Ligh
 
 In this supplemental material, we provide additional time complexity calculation details
 and three additional comparison methods have been added to the main paper 
-![](https://github.com/YuxinBao/SwinDiD/blob/main/block.png)
+![](https://github.com/YuxinBao/SwinDiD/blob/main/SwinDiD-supp.pdf)
