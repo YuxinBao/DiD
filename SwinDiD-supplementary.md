@@ -24,7 +24,7 @@ The overall time complexity of a convolutional neural network is the sum of the 
  <p align="center">Fig.1. Illustration of one Distg-Block and DiD-Block.</p>
  
  
-As shown in Fig.1, the input feature is of size $UH \times VW \times C$, where $U$ and $V$ are the angular resolution, $H$ and $W$ are the spatial resolutions. We define the angular resolution $U=V=A$, so the input feature of size can be express as $AH \times AW \times C$. 
+As shown in Fig.1, the input feature is of size $UH \times VW \times C$, where $U$ and $V$ are the angular resolution, $H$ and $W$ are the spatial resolutions. We define the angular resolution $U=V=A$, so the input feature of size can be expressed as $AH \times AW \times C$. 
 Pixel shuffle and Concatenate operations have less time complexity, therefore it is not computed in the calculation of the time complexity. Next, we will calculate the time complexity of Distg-Block and DiD-Block respectively.
 
 ### 1.1 Time Complexity of Distg-Block
@@ -54,7 +54,7 @@ In the convolution operation of the EFE-H, the input feature $F_{in}$ of size $A
 The feature $F_{E-H}$ is fed into a $1\times1$ Conv operation to output $\hat{F}_{E-H}$ of size $AH \times W \times \dfrac{AC}{2}$. 
 The time complexity of $1\times1$ Conv operation is $\mathcal{O}(\dfrac{1}{4}C^2A^2HW )$ .
 
-The time complexity of the EFE-H branch branch of Distg-Block is calculated as follows:
+The time complexity of the EFE-H branch of Distg-Block is calculated as follows:
 
 <p align="center">$\mathcal{O}(\dfrac{1}{2}C^2A^3HW  +\dfrac{1}{4}C^2A^2HW )$  (4)</p>
 
@@ -66,7 +66,7 @@ In the convolution operation of the EFE-V, the input feature $F_{in}$ of size $A
 The feature $F_{E-V}$ is fed into a $1\times1$ Conv operation to output $\hat{F}_{E-V}$ of size $H \times AW \times \dfrac{AC}{2}$. 
 The time complexity of $1\times1$ Conv operation is $\mathcal{O}(\dfrac{1}{4}C^2A^2HW )$ .
 
-The time complexity of the EFE-V branch branch of Distg-Block is calculated as follows:
+The time complexity of the EFE-V branch of Distg-Block is calculated as follows:
 
 <p align="center">$\mathcal{O}(\dfrac{1}{2}C^2A^3HW  +\dfrac{1}{4}C^2A^2HW )$  (5)</p>
 
@@ -110,7 +110,7 @@ The time complexity of the spatial feature extraction branch of Distg-Block is c
 
 In the convolution operation of the EFE-H, the input feature $F_{in}$ of size $AH \times AW \times C$ is fed to EFE-H with a kernel $1 \times A^2$ to output $F_{E-H}$ of size $AH \times W \times C_{E-H}$. The time complexity of EFE-H is $\mathcal{O}(CA^5HWY )$ with $C_{E-H}= A^2Y$.
 
-The time complexity of the EFE-H branch branch of Distg-Block is calculated as follows:
+The time complexity of the EFE-H branch of Distg-Block is calculated as follows:
 
 <p align="center">$\mathcal{O}(CA^5HWY )$  (10)</p>
 
@@ -120,7 +120,7 @@ The time complexity of the EFE-H branch branch of Distg-Block is calculated as f
 
 In the convolution operation of the EFE-V, the input feature $F_{in}$ of size $AH \times AW \times C$ is fed to EFE-V with a kernel $A^2 \times 1$ to output $F_{E-V}$ of size $H \times AW \times C_{E-V}$. The time complexity of EFE-V is $\mathcal{O}(CA^5HWY )$ with $C_{E-V}= A^2Y$.
 
-The time complexity of the EFE-V branch branch of Distg-Block is calculated as follows:
+The time complexity of the EFE-V branch of Distg-Block is calculated as follows:
 
 <p align="center">$\mathcal{O}(CA^5HWY)$  (11)</p>
 
@@ -152,19 +152,6 @@ On the basis of the main paper, we have added two SISR methods which are EDSR [2
 ### 2.1 Quantitative Results
 Table 1 and Table 2 show the quantitative results achieved by SwinDiD in comparison with other state-of-the-art SR methods on 2 × and 4 × SR, respectively. SwinDiD achieves competitive PSNR and SSIM results on all five datasets on 2 × and 4 × SR. 
 
-### 2.2 Qualitative Results 
-Fig.2 and Fig.3 show the whole image visual quality comparisons of different methods for 2 × and 4 × SR, respectively.
-It can be seen that the SISR methods including VDSR [2], EDSR [3], and RCAN [4], fail to recover complex textures and details. In contrast, the deep learning based LF image SR methods can produce better visual effects than SISR methods, which is attribute to the use of different viewpoints information. However, edges and textures recovered by these methods are still suffer from blurring.
-Compared with state-of-the-art methods, our SwinDiD can recover complex structures with shaper edges and fine details. Besides, we can observe that SwinDiD generates more appealing result than DiD in  2 × and 4 × SR.
-
-<p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/2×SR.png" width="600px"></p>
- <p align="center">Fig.2. Visual quality comparisons of 2 × SR for different methods.</p>
- 
- <p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/4×SR.png" width="600px"></p>
- <p align="center">Fig.3. Visual quality comparisons of  4 × SR for different methods.</p>
-
-
-
 Table 1. PSNR/SSIM values achieved by different methods for 2 × SR. The best results are bolded.
  
 | Method | scale | EPFL |HCInew | HCIold | INRIA | STFgantry|
@@ -195,6 +182,23 @@ Table 2. PSNR/SSIM values achieved by different methods for 4 × SR. The best re
 | DistgSSR [8]| 4 |28.77/0.915|31.16/0.918|37.25/0.972|30.82/0.949|31.03/0.949|
 | DiD | 4 | **28.86**/0.917|31.29/0.920|37.48/**0.973**|**31.04/0.951**|31.26/0.951|
 | SwinDiD | 4 | **28.86/0.918**|**31.30/0.921**|**37.52/0.973**|30.93/**0.951**|**31.37/0.952**|
+
+
+
+### 2.2 Qualitative Results 
+Fig.2 and Fig.3 show the whole image visual quality comparisons of different methods for 2 × and 4 × SR, respectively.
+It can be seen that the SISR methods including VDSR [2], EDSR [3] and RCAN [4], fail to recover complex textures and details. In contrast, the deep learning based LF image SR methods can produce better visual effects than SISR methods, which is attribute to the use of different viewpoints information. However, edges and textures recovered by these methods are still suffer from blurring.
+Compared with state-of-the-art methods, our SwinDiD can recover complex structures with shaper edges and fine details. Besides, we can observe that SwinDiD generates more appealing result than DiD in  2 × and 4 × SR.
+
+<p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/2×SR.png" width="600px"></p>
+ <p align="center">Fig.2. Visual quality comparisons of 2 × SR for different methods.</p>
+ 
+ <p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/4×SR.png" width="600px"></p>
+ <p align="center">Fig.3. Visual quality comparisons of  4 × SR for different methods.</p>
+
+
+
+
 
 
 ### Reference
