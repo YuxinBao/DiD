@@ -206,6 +206,7 @@ Compared with state-of-the-art methods, our SwinDiD can recover complex structur
 [1] J. K. Lee J. Kim and K. M. Lee, “Accurate image super-resolution using very deep convolutional networks,” in 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 1646–1654.
 
 [2] B. Lim, S. Son, H. Kim, S. Nah, and K. M. Lee, “Enhanced deep residual networks for single image superresolution,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW),2017, pp. 1132–1140.
+
 [3] Y. Zhang, K. Li, K. Li, L. Wang, B. Zhong, and Y. Fu, “Image super-resolution using very deep residual channel attention networks,” 2018.
 
 [4] S. Zhang, Y. Lin, and H. Sheng, “Residual networks for light field image super-resolution,” 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 11038–11047, 2019.
