@@ -1,4 +1,4 @@
-# SwinDiD
+# DiD
 SwinDiD : Dimension-invariant Disentangling model with Swin Transformer for Light Field Super-Resolution
 
 In the SwinDiD-supplementary material, we provide additional time complexity calculation details
