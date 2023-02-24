@@ -1,5 +1,5 @@
-# SwinDiD-supplementary
-Supplementary Material for ``SwinDiD: Dimension-invariant Disentangling model with Swin Transformer for Light Field Super-Resolution''
+# DiD-supplementary
+Supplementary Material for ``DiD: Dimension-invariant Disentangling model for Light Field Super-Resolution''
 
 In this supplementary material, we provide additional time complexity calculation details
 and three additional comparison methods have been added to the main paper. 
