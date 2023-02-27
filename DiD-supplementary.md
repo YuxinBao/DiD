@@ -186,6 +186,7 @@ Table 2. PSNR/SSIM values achieved by different methods for 4 × SR. The best re
 
 
 ### 2.2 Qualitative Results 
+<!---
 Fig.2 and Fig.3 show the whole image visual quality comparisons of different methods for 2 × and 4 × SR, respectively.
 It can be seen that the SISR methods including VDSR [2], EDSR [3] and RCAN [4], fail to recover complex textures and details. In contrast, the deep learning based LF image SR methods can produce better visual effects than SISR methods, which is attribute to the use of different viewpoints information. However, edges and textures recovered by these methods are still suffer from blurring.
 Compared with state-of-the-art methods, our SwinDiD can recover complex structures with shaper edges and fine details. Besides, we can observe that SwinDiD generates more appealing result than DiD in  2 × and 4 × SR.
@@ -195,7 +196,7 @@ Compared with state-of-the-art methods, our SwinDiD can recover complex structur
  
  <p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/4×SR.png" width="600px"></p>
  <p align="center">Fig.3. Visual quality comparisons of  4 × SR for different methods.</p>
-
+-->
 
 
 
