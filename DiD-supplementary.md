@@ -20,7 +20,7 @@ where $C_{in}$ represents the number of input channels, that is, the number of o
 It can be seen that the time complexity of each convolutional layer is completely determined by the area of the output feature map $M^2$, the area of the convolution kernel $K^2$, and the number of input $C_{in}$ and output channels $C_{out}$. 
 The overall time complexity of a convolutional neural network is the sum of the time complexity of each convolutional layer. 
 
-<p align="center"><img src="https://github.com/YuxinBao/SwinDiD/blob/main/Block.png" width="600px"></p>
+<p align="center"><img src="https://github.com/YuxinBao/DiD/blob/main/Block.png" width="600px"></p>
  <p align="center">Fig.1. Illustration of one Distg-Block and DiD-Block.</p>
  
  
