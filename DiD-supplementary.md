@@ -150,7 +150,7 @@ Therefore, according to Eq.(7) and Eq.(14), the time complexity of Distg-Block a
 On the basis of the main paper, we have added two SISR methods which are EDSR [2], and RCAN [3] and a LF image SR method which is resLF [4] for comparison, and compare the whole image with each other.
 
 ### 2.1 Quantitative Results
-Table 1 and Table 2 show the quantitative results achieved by SwinDiD in comparison with other state-of-the-art SR methods on 2 × and 4 × SR, respectively. SwinDiD achieves competitive PSNR and SSIM results on all five datasets on 2 × and 4 × SR. 
+Table 1 and Table 2 show the quantitative results achieved by DiD, DiD-SwinT and DiD-MST++ in comparison with other state-of-the-art SR methods on 2 × and 4 × SR, respectively. DiD-MST++ achieves competitive PSNR and SSIM results on all five datasets on 2 × and 4 × SR. 
 
 Table 1. PSNR/SSIM values achieved by different methods for 2 × SR. The best results are bolded.
  
