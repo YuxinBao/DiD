@@ -181,14 +181,14 @@ Table 2. PSNR/SSIM values achieved by different methods for 4 × SR. The best re
 | LF-ATO [6]| 4 | 28.51/0.912|30.88/0.913|37.00/0.970|30.71/0.948|30.61/0.943|
 | LF-InterNet [7]| 4 | 28.51/0.912|30.82/0.914|36.83/0.970|30.50/0.947|30.22/0.938|
 | DistgSSR [8]| 4 |28.77/0.915|31.16/0.918|37.25/0.972|30.82/0.949|31.03/0.949|
-| DiD | 4 | **28.86**/0.917|31.29/0.920|37.48/**0.973**|**31.04/0.951**|31.26/0.951|
-| DiD-SwinT | 4 | **28.86/0.918**|**31.30/0.921**|**37.52/0.973**|30.93/**0.951**|**31.37/0.952**|
+| DiD | 4 | 28.74/0.916|31.21/0.919|37.31/0.972|30.86/0.950|31.09/0.949|
+| DiD-SwinT | 4 | 28.71/0.914|31.17/0.919|37.17/0.971|30.83/0.950|31.11/0.949|
 | DiD-MST++ | 4 | **28.92/0.917**|**31.35/0.921**|**37.50/0.973**|31.02/**0.952**|**31.27/0.952**|
 
 
-
-### 2.2 Qualitative Results 
 <!---
+### 2.2 Qualitative Results 
+
 Fig.2 and Fig.3 show the whole image visual quality comparisons of different methods for 2 × and 4 × SR, respectively.
 It can be seen that the SISR methods including VDSR [2], EDSR [3] and RCAN [4], fail to recover complex textures and details. In contrast, the deep learning based LF image SR methods can produce better visual effects than SISR methods, which is attribute to the use of different viewpoints information. However, edges and textures recovered by these methods are still suffer from blurring.
 Compared with state-of-the-art methods, our SwinDiD can recover complex structures with shaper edges and fine details. Besides, we can observe that SwinDiD generates more appealing result than DiD in  2 × and 4 × SR.
